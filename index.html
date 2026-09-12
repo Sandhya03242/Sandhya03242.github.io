@@ -1,275 +1,1132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sandhya S — AI Engineer</title>
-<meta name="description" content="Sandhya S — AI Engineer specializing in LLMs, RAG, fine-tuning and AI agents.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sandhya S — AI Engineer</title>
+
+    <meta name="description"
+          content="Sandhya S — AI Engineer specializing in Generative AI, LLMs, RAG, AI Agents, Machine Learning and Computer Vision.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="grain"></div>
+<!-- =========================================================
+     BACKGROUND
+========================================================= -->
 
-<header class="nav">
-  <a href="#top" class="nav__mark">SS</a>
-  <nav class="nav__links">
-    <a href="#work">Work</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a class="nav__resume" href="mailto:sandhyasuresh03242@gmail.com">Get in touch</a>
+<div class="background">
+
+    <div class="grid"></div>
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="particles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            Sandhya<span>.</span>
+        </a>
+
+        <nav>
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#systems">Systems</a>
+            <a href="#experience">Experience</a>
+            <a href="#stack">Stack</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <a href="#contact" class="nav-button">
+            Let's Talk
+        </a>
+
+    </div>
+
 </header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <main>
 
-  <!-- ================= HERO ================= -->
-  <section id="top" class="hero">
-    <div class="hero__intro">
-      <div class="hero__id">
-        <img src="profile.jpg" alt="Sandhya S" class="hero__photo">
-        <p class="hero__eyebrow">AI Engineer &mdash; Malappuram, Kerala, India</p>
-      </div>
-      <h1 class="hero__name">Sandhya S</h1>
-      <p class="hero__tagline">
-        I build systems that let language models find things, remember things,
-        and say them correctly &mdash; RAG pipelines, fine-tuned open-source LLMs,
-        and the infrastructure that gets them into production.
-      </p>
-      <div class="hero__cta">
-        <a href="#work" class="btn btn--primary">See the work</a>
-        <a href="https://github.com/Sandhya03242" target="_blank" rel="noopener" class="btn btn--ghost">GitHub</a>
-      </div>
-    </div>
+<section id="home" class="hero">
 
-    <div class="hero__pipeline" aria-hidden="true">
-      <p class="pipeline__label">a query, in production</p>
-      <svg viewBox="0 0 320 360" class="pipeline__svg">
-        <line x1="60" y1="40" x2="60" y2="320" class="pipeline__spine"/>
-        <g class="pipeline__node" data-delay="0">
-          <circle cx="60" cy="40" r="5"/>
-          <text x="82" y="36">query received</text>
-          <text x="82" y="52" class="pipeline__sub">FastAPI · /chat</text>
-        </g>
-        <g class="pipeline__node" data-delay="1">
-          <circle cx="60" cy="126" r="5"/>
-          <text x="82" y="122">embedded</text>
-          <text x="82" y="138" class="pipeline__sub">sentence-transformers</text>
-        </g>
-        <g class="pipeline__node" data-delay="2">
-          <circle cx="60" cy="212" r="5"/>
-          <text x="82" y="208">retrieved</text>
-          <text x="82" y="224" class="pipeline__sub">Pinecone · top-k</text>
-        </g>
-        <g class="pipeline__node" data-delay="3">
-          <circle cx="60" cy="298" r="5"/>
-          <text x="82" y="294">generated</text>
-          <text x="82" y="310" class="pipeline__sub">fine-tuned LLM</text>
-        </g>
-        <circle r="4" class="pipeline__pulse">
-          <animateMotion dur="4s" repeatCount="indefinite"
-            path="M60,40 L60,126 L60,212 L60,298" />
-        </circle>
-      </svg>
-    </div>
-  </section>
+    <div class="hero-container">
 
-  <!-- ================= ABOUT / STATS ================= -->
-  <section class="about">
-    <div class="about__stats">
-      <div class="stat">
-        <span class="stat__num">30%</span>
-        <span class="stat__label">better retrieval accuracy<br>on production RAG apps</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">40%</span>
-        <span class="stat__label">lower response latency<br>after pipeline tuning</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">60%</span>
-        <span class="stat__label">less memory usage<br>via quantization</span>
-      </div>
-    </div>
-    <p class="about__text">
-      I'm a junior AI engineer working at the layer between research and shipped product &mdash;
-      fine-tuning open-source LLMs with LoRA and PEFT, wiring up retrieval-augmented pipelines
-      with LangChain and LangGraph, and packaging the result as FastAPI services that run
-      efficiently under real constraints. Most of what I do lives in the gap between
-      "the model works in a notebook" and "the model works at 2am under load."
-    </p>
-  </section>
+        <!-- LEFT -->
 
-  <!-- ================= PROJECTS ================= -->
-  <section id="work" class="work">
-    <h2 class="section-title">Selected work</h2>
+        <div class="hero-content reveal">
 
-    <article class="project">
-      <div class="project__meta">
-        <span class="project__index">Domain RAG Applications</span>
-        <span class="project__role">Axomium Labs &middot; 2024&ndash;Present</span>
-      </div>
-      <h3 class="project__title">Retrieval pipelines that don't hallucinate on domain data</h3>
-      <p class="project__desc">
-        Built and deployed domain-specific RAG applications on LangChain and LangGraph,
-        backed by Pinecone for retrieval and API-based LLMs for generation. Fine-tuned
-        open-source models with Hugging Face Transformers, LoRA and PEFT across 10,000+
-        sample datasets to cut hallucinations and sharpen domain-specific responses.
-      </p>
-      <ul class="project__facts">
-        <li><strong>+30%</strong> retrieval accuracy</li>
-        <li><strong>&minus;40%</strong> response latency</li>
-        <li><strong>&minus;50%</strong> deployment time via Dockerized FastAPI services</li>
-      </ul>
-      <div class="project__stack">
-        <span>LangChain</span><span>LangGraph</span><span>Pinecone</span><span>Hugging Face</span><span>PEFT</span><span>Docker</span><span>FastAPI</span>
-      </div>
-    </article>
+            <div class="status">
 
-    <article class="project">
-      <div class="project__meta">
-        <span class="project__index">NLP Recommendation Engine</span>
-        <span class="project__role">Personal project</span>
-      </div>
-      <h3 class="project__title">Music Recommender System</h3>
-      <p class="project__desc">
-        A lyrics-based recommendation engine using TF-IDF and cosine similarity across
-        over one million songs, connected to the Spotify API and shipped as a Streamlit
-        app. Turns "songs that mean this" into a ranked, listenable playlist.
-      </p>
-      <ul class="project__facts">
-        <li><strong>1M+</strong> lyrics indexed</li>
-        <li><strong>+30%</strong> recommendation accuracy</li>
-      </ul>
-      <div class="project__stack">
-        <span>Python</span><span>TF&#8209;IDF</span><span>Spotify API</span><span>Streamlit</span>
-      </div>
-      <a class="project__link" href="https://github.com/Sandhya03242" target="_blank" rel="noopener">View on GitHub &rarr;</a>
-    </article>
+                <span class="status-dot"></span>
 
-    <article class="project">
-      <div class="project__meta">
-        <span class="project__index">Embedded Computer Vision</span>
-        <span class="project__role">Personal project</span>
-      </div>
-      <h3 class="project__title">VisioGuide</h3>
-      <p class="project__desc">
-        A lightweight smart cap for the visually impaired: real-time object detection
-        with a TensorFlow CNN, paired with voice-guided navigation through Pyttsx3,
-        running on a Raspberry Pi for portability.
-      </p>
-      <ul class="project__facts">
-        <li><strong>90%</strong> real-time detection accuracy</li>
-        <li>Optimized for on-device Raspberry Pi inference</li>
-      </ul>
-      <div class="project__stack">
-        <span>TensorFlow</span><span>CNN</span><span>Pyttsx3</span><span>Raspberry Pi</span>
-      </div>
-      <a class="project__link" href="https://github.com/Sandhya03242" target="_blank" rel="noopener">View on GitHub &rarr;</a>
-    </article>
-  </section>
+                <span>
+                    AI ENGINEER · BUILDING INTELLIGENT SYSTEMS
+                </span>
 
-  <!-- ================= EXPERIENCE ================= -->
-  <section id="experience" class="experience">
-    <h2 class="section-title">Experience</h2>
-    <div class="timeline">
-      <div class="timeline__item">
-        <div class="timeline__date">Nov 2024 &ndash; Present</div>
-        <div class="timeline__content">
-          <h3>Junior AI Engineer</h3>
-          <p class="timeline__org">Axomium Labs &middot; Remote</p>
-          <ul>
-            <li>Built and deployed domain-specific RAG applications using LangChain, LangGraph, Pinecone and API-based LLMs, improving retrieval accuracy ~30% and cutting response latency 40%.</li>
-            <li>Fine-tuned open-source LLMs with Hugging Face Transformers, LoRA and PEFT on 10,000+ sample custom datasets, improving domain-specific quality and reducing hallucinations.</li>
-            <li>Developed and deployed containerized FastAPI microservices and RAG pipelines with Docker, cutting deployment time 50%.</li>
-            <li>Applied quantization and inference optimization, reducing model memory usage up to 60% and improving inference speed 35% in constrained environments.</li>
-          </ul>
+            </div>
+
+
+            <h1>
+
+                Building
+
+                <span class="gradient-text">
+                    Intelligent
+                </span>
+
+                Systems.
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Computer Science Engineering graduate and AI Engineer
+                working across Generative AI, LLMs, RAG, AI Agents,
+                Machine Learning and Computer Vision.
+
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a href="#systems" class="primary-button">
+
+                    Explore My Work
+
+                    <span>↗</span>
+
+                </a>
+
+
+                <a href="https://github.com/Sandhya03242"
+                   target="_blank"
+                   rel="noopener"
+                   class="secondary-button">
+
+                    GitHub
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-meta">
+
+                <div>
+
+                    <strong>01+</strong>
+
+                    <span>Years AI Experience</span>
+
+                </div>
+
+                <div>
+
+                    <strong>03</strong>
+
+                    <span>Featured Systems</span>
+
+                </div>
+
+                <div>
+
+                    <strong>∞</strong>
+
+                    <span>Things To Build</span>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
-      <div class="timeline__item">
-        <div class="timeline__date">Jul 2024 &ndash; Nov 2024</div>
-        <div class="timeline__content">
-          <h3>Data Science Intern</h3>
-          <p class="timeline__org">Luminar Technolab &middot; Kochi, India</p>
-          <ul>
-            <li>Performed data analysis, visualization and reporting in Python, NumPy, Pandas and Power BI across 10,000+ record datasets to support data-driven decisions.</li>
-            <li>Built machine learning models with Scikit-learn on 10,000+ record datasets, applying feature engineering and EDA to improve prediction accuracy.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ================= SKILLS ================= -->
-  <section id="skills" class="skills">
-    <h2 class="section-title">Skills &amp; stack</h2>
-    <div class="skills__grid">
-      <div class="skills__group">
-        <h3>Languages &amp; data</h3>
-        <div class="chips">
-          <span>Python</span><span>SQL</span><span>MySQL</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>Power BI</span>
-        </div>
-      </div>
-      <div class="skills__group">
-        <h3>ML &amp; LLMs</h3>
-        <div class="chips">
-          <span>Scikit-learn</span><span>Deep Learning</span><span>NLP</span><span>LLM Fine-tuning</span><span>Hugging Face</span><span>PEFT</span><span>Unsloth</span><span>Ollama</span><span>RAG</span><span>Embeddings</span><span>Vector DBs</span><span>MCP</span>
-        </div>
-      </div>
-      <div class="skills__group">
-        <h3>Frameworks &amp; deploy</h3>
-        <div class="chips">
-          <span>PyTorch</span><span>TensorFlow</span><span>FastAPI</span><span>Docker</span><span>LangChain</span><span>LangGraph</span><span>Streamlit</span><span>Gradio</span>
-        </div>
-      </div>
-      <div class="skills__group">
-        <h3>Infra &amp; tools</h3>
-        <div class="chips">
-          <span>AWS</span><span>Pinecone</span><span>FAISS</span><span>Chroma</span><span>Git</span><span>GitHub</span><span>Excel</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ================= EDUCATION ================= -->
-  <section class="education">
-    <h2 class="section-title">Education</h2>
-    <div class="edu-item">
-      <div>
-        <h3>B.Tech, Computer Science &amp; Engineering</h3>
-        <p class="timeline__org">APJ Abdul Kalam Technological University</p>
-      </div>
-      <div class="edu-item__meta">
-        <span>Oct 2020 &ndash; Jun 2024</span>
-        <span>CGPA 7.73 / 10</span>
-      </div>
-    </div>
-  </section>
+        <!-- RIGHT AI VISUAL -->
 
-  <!-- ================= CONTACT ================= -->
-  <section id="contact" class="contact">
-    <h2 class="section-title">Let's talk</h2>
-    <p class="contact__text">
-      Open to AI Engineer roles and interesting problems involving LLMs, agents and retrieval.
-    </p>
-    <div class="contact__links">
-      <a href="mailto:sandhyasuresh03242@gmail.com">sandhyasuresh03242@gmail.com</a>
-      <a href="tel:+917736978218">+91 77369 78218</a>
-      <a href="https://linkedin.com/in/sandhya-s-610350254" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/Sandhya03242" target="_blank" rel="noopener">GitHub</a>
+        <div class="hero-visual reveal">
+
+            <div class="ai-system">
+
+                <div class="system-header">
+
+                    <span>AI_CORE</span>
+
+                    <span class="system-live">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="system-body">
+
+                    <!-- NODE -->
+
+                    <div class="ai-node node-input">
+
+                        <div class="node-icon">
+                            IN
+                        </div>
+
+                        <span>
+                            INPUT
+                        </span>
+
+                    </div>
+
+
+                    <!-- CONNECTION -->
+
+                    <div class="connection connection-1">
+                        <span></span>
+                    </div>
+
+
+                    <!-- NODE -->
+
+                    <div class="ai-node node-model">
+
+                        <div class="node-icon">
+                            AI
+                        </div>
+
+                        <span>
+                            MODEL
+                        </span>
+
+                    </div>
+
+
+                    <div class="connection connection-2">
+                        <span></span>
+                    </div>
+
+
+                    <!-- NODE -->
+
+                    <div class="ai-node node-agent">
+
+                        <div class="node-icon">
+                            AG
+                        </div>
+
+                        <span>
+                            AGENT
+                        </span>
+
+                    </div>
+
+
+                    <div class="connection connection-3">
+                        <span></span>
+                    </div>
+
+
+                    <!-- NODE -->
+
+                    <div class="ai-node node-output">
+
+                        <div class="node-icon">
+                            ✓
+                        </div>
+
+                        <span>
+                            OUTPUT
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="system-terminal">
+
+                    <div>
+                        <span class="terminal-green">></span>
+                        initializing_ai_pipeline...
+                    </div>
+
+                    <div>
+                        <span class="terminal-green">></span>
+                        loading_context...
+                    </div>
+
+                    <div>
+                        <span class="terminal-green">></span>
+                        reasoning...
+                    </div>
+
+                    <div>
+                        <span class="terminal-success">✓</span>
+                        system_ready
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-  </section>
+
+
+    <div class="scroll-indicator">
+
+        <span>SCROLL TO EXPLORE</span>
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about" class="section about">
+
+    <div class="section-container">
+
+        <div class="section-label reveal">
+
+            <span>01</span>
+            ABOUT
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-heading reveal">
+
+                <h2>
+
+                    I build AI systems
+                    <span>that solve problems.</span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="about-content reveal">
+
+                <p>
+
+                    I'm Sandhya, an AI Engineer focused on building
+                    practical intelligent applications using modern
+                    AI technologies.
+
+                </p>
+
+                <p>
+
+                    My work spans Generative AI, Large Language Models,
+                    Retrieval-Augmented Generation, AI Agents,
+                    Machine Learning and Computer Vision.
+
+                </p>
+
+                <p>
+
+                    I enjoy turning complex AI concepts into
+                    usable systems, APIs and applications.
+
+                </p>
+
+
+                <div class="about-tags">
+
+                    <span>GenAI</span>
+                    <span>LLMs</span>
+                    <span>RAG</span>
+                    <span>AI Agents</span>
+                    <span>Computer Vision</span>
+                    <span>Machine Learning</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SYSTEMS / PROJECTS
+========================================================= -->
+
+<section id="systems" class="section systems">
+
+    <div class="section-container">
+
+        <div class="section-label reveal">
+
+            <span>02</span>
+            SELECTED SYSTEMS
+
+        </div>
+
+
+        <div class="systems-heading reveal">
+
+            <h2>
+                Things I've built.
+            </h2>
+
+            <p>
+                AI projects designed around real-world problems.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             PROJECT 01
+        ================================================= -->
+
+        <article class="project project-large reveal">
+
+            <div class="project-info">
+
+                <div class="project-number">
+                    01 / 03
+                </div>
+
+                <h3>
+                    OmniSight
+                </h3>
+
+                <h4>
+                    Multimodal UI Self-Healing & RPA Agent
+                </h4>
+
+                <p>
+
+                    An intelligent UI automation system that combines
+                    browser automation, computer vision, LLM reasoning
+                    and source-code modification to detect and repair
+                    interface issues automatically.
+
+                </p>
+
+
+                <div class="project-stack">
+
+                    <span>Python</span>
+                    <span>Playwright</span>
+                    <span>Qwen VLM</span>
+                    <span>FastAPI</span>
+                    <span>React</span>
+                    <span>GitHub</span>
+
+                </div>
+
+
+                <a href="https://github.com/Sandhya03242/OmniSight_Multimodal_UI_SelfHealing_RPA-Agent"
+                   target="_blank"
+                   rel="noopener"
+                   class="project-link">
+
+                    View Repository
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="project-visual omnissight-visual">
+
+                <div class="browser-window">
+
+                    <div class="browser-top">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="browser-content">
+
+                        <div class="mock-nav">
+                            OmniShop
+                        </div>
+
+
+                        <div class="mock-products">
+
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                        </div>
+
+
+                        <div class="bug-box">
+
+                            <span>ISSUE DETECTED</span>
+
+                            <small>
+                                UI overlap
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="flow-label flow-1">
+                    SCREENSHOT
+                </div>
+
+                <div class="flow-label flow-2">
+                    VLM
+                </div>
+
+                <div class="flow-label flow-3">
+                    FIX
+                </div>
+
+                <div class="flow-label flow-4">
+                    VERIFY
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================================
+             PROJECT 02
+        ================================================= -->
+
+        <article class="project project-reverse reveal">
+
+            <div class="project-visual music-visual">
+
+                <div class="music-interface">
+
+                    <div class="music-cover"></div>
+
+                    <div class="music-lines">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="recommendation">
+
+                        <span>
+                            RECOMMENDED
+                        </span>
+
+                        <strong>
+                            Similar tracks
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="vector-space">
+
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-info">
+
+                <div class="project-number">
+                    02 / 03
+                </div>
+
+                <h3>
+                    Music Recommender
+                </h3>
+
+                <h4>
+                    NLP-Based Recommendation System
+                </h4>
+
+                <p>
+
+                    A content-based music recommendation system using
+                    NLP techniques to understand song information and
+                    recommend similar tracks.
+
+                </p>
+
+
+                <div class="project-stack">
+
+                    <span>Python</span>
+                    <span>NLP</span>
+                    <span>TF-IDF</span>
+                    <span>Cosine Similarity</span>
+                    <span>Spotify API</span>
+                    <span>Streamlit</span>
+
+                </div>
+
+
+                <a href="https://github.com/Sandhya03242/-Music_Recommender_System"
+                   target="_blank"
+                   rel="noopener"
+                   class="project-link">
+
+                    View Repository
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================================
+             PROJECT 03
+        ================================================= -->
+
+        <article class="project reveal">
+
+            <div class="project-info">
+
+                <div class="project-number">
+                    03 / 03
+                </div>
+
+                <h3>
+                    VisioGuide
+                </h3>
+
+                <h4>
+                    Real-Time Computer Vision Assistant
+                </h4>
+
+                <p>
+
+                    An edge-AI computer vision system using a camera
+                    and TensorFlow Lite to detect objects in real time
+                    and provide voice-guided assistance.
+
+                </p>
+
+
+                <div class="project-stack">
+
+                    <span>Python</span>
+                    <span>OpenCV</span>
+                    <span>TensorFlow Lite</span>
+                    <span>Raspberry Pi</span>
+                    <span>Computer Vision</span>
+
+                </div>
+
+
+                <a href="https://github.com/Sandhya03242/Visioguide"
+                   target="_blank"
+                   rel="noopener"
+                   class="project-link">
+
+                    View Repository
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="project-visual vision-visual">
+
+                <div class="camera-frame">
+
+                    <div class="scan-line"></div>
+
+                    <div class="object object-1">
+                        OBJECT
+                    </div>
+
+                    <div class="object object-2">
+                        PERSON
+                    </div>
+
+                    <div class="object object-3">
+                        CHAIR
+                    </div>
+
+                </div>
+
+
+                <div class="vision-status">
+
+                    <span class="status-dot"></span>
+
+                    OBJECT DETECTION ACTIVE
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section id="experience" class="section experience">
+
+    <div class="section-container">
+
+        <div class="section-label reveal">
+
+            <span>03</span>
+            EXPERIENCE
+
+        </div>
+
+
+        <div class="experience-heading reveal">
+
+            <h2>
+                Where I've worked.
+            </h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <!-- EXPERIENCE -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-marker">
+                    01
+                </div>
+
+
+                <div class="timeline-date">
+                    NOV 2024 — PRESENT
+                </div>
+
+
+                <div class="timeline-content">
+
+                    <h3>
+                        Junior AI Engineer
+                    </h3>
+
+                    <h4>
+                        Axomium Labs
+                    </h4>
+
+                    <p>
+
+                        Working on Artificial Intelligence and
+                        Generative AI applications involving LLMs,
+                        RAG, AI agents, model integration and
+                        backend APIs.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- INTERNSHIP -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-marker">
+                    02
+                </div>
+
+
+                <div class="timeline-date">
+                    2024
+                </div>
+
+
+                <div class="timeline-content">
+
+                    <h3>
+                        Data Science Intern
+                    </h3>
+
+                    <h4>
+                        Luminar Technolab
+                    </h4>
+
+                    <p>
+
+                        Worked with Python, data analysis,
+                        machine learning and NLP while developing
+                        a music recommendation system.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- EDUCATION -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-marker">
+                    03
+                </div>
+
+
+                <div class="timeline-date">
+                    2020 — 2024
+                </div>
+
+
+                <div class="timeline-content">
+
+                    <h3>
+                        B.Tech — Computer Science Engineering
+                    </h3>
+
+                    <h4>
+                        APJ Abdul Kalam Technological University
+                    </h4>
+
+                    <p>
+                        CGPA: 7.73 / 10
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TECH STACK
+========================================================= -->
+
+<section id="stack" class="section stack">
+
+    <div class="section-container">
+
+        <div class="section-label reveal">
+
+            <span>04</span>
+            TECHNOLOGY
+
+        </div>
+
+
+        <div class="stack-heading reveal">
+
+            <h2>
+                My AI stack.
+            </h2>
+
+            <p>
+                Tools I use to design, build and deploy intelligent systems.
+            </p>
+
+        </div>
+
+
+        <div class="stack-cloud reveal">
+
+            <span class="stack-item large">
+                Python
+            </span>
+
+            <span class="stack-item">
+                PyTorch
+            </span>
+
+            <span class="stack-item large">
+                Hugging Face
+            </span>
+
+            <span class="stack-item">
+                Transformers
+            </span>
+
+            <span class="stack-item">
+                LangChain
+            </span>
+
+            <span class="stack-item large">
+                LangGraph
+            </span>
+
+            <span class="stack-item">
+                FastAPI
+            </span>
+
+            <span class="stack-item">
+                RAG
+            </span>
+
+            <span class="stack-item large">
+                LLMs
+            </span>
+
+            <span class="stack-item">
+                AI Agents
+            </span>
+
+            <span class="stack-item">
+                Fine-Tuning
+            </span>
+
+            <span class="stack-item">
+                PEFT
+            </span>
+
+            <span class="stack-item">
+                Unsloth
+            </span>
+
+            <span class="stack-item large">
+                Pinecone
+            </span>
+
+            <span class="stack-item">
+                FAISS
+            </span>
+
+            <span class="stack-item">
+                Chroma
+            </span>
+
+            <span class="stack-item">
+                OpenCV
+            </span>
+
+            <span class="stack-item">
+                TensorFlow
+            </span>
+
+            <span class="stack-item">
+                Docker
+            </span>
+
+            <span class="stack-item">
+                AWS
+            </span>
+
+            <span class="stack-item">
+                SQL
+            </span>
+
+            <span class="stack-item">
+                Git
+            </span>
+
+            <span class="stack-item">
+                GitHub
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact" class="section contact">
+
+    <div class="contact-container reveal">
+
+        <div class="contact-eyebrow">
+
+            AVAILABLE FOR OPPORTUNITIES
+
+        </div>
+
+
+        <h2>
+
+            Let's build something
+            <span>intelligent.</span>
+
+        </h2>
+
+
+        <p>
+
+            I'm open to AI Engineer, Generative AI,
+            LLM and AI/ML opportunities.
+
+        </p>
+
+
+        <div class="contact-actions">
+
+            <a href="mailto:sandhyasuresh03242@gmail.com"
+               class="primary-button">
+
+                Start a Conversation
+
+                <span>↗</span>
+
+            </a>
+
+            <a href="https://www.linkedin.com/in/sandhya-s-610350254/"
+               target="_blank"
+               rel="noopener"
+               class="secondary-button">
+
+                LinkedIn
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 </main>
 
-<footer class="footer">
-  <span>Sandhya S &middot; Malappuram, Kerala, India</span>
-  <span id="year"></span>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+            Sandhya<span>.</span>
+        </div>
+
+
+        <div class="footer-text">
+            AI Engineer · Generative AI · Intelligent Systems
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="https://github.com/Sandhya03242"
+               target="_blank"
+               rel="noopener">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/sandhya-s-610350254/"
+               target="_blank"
+               rel="noopener">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
 </footer>
 
+
+<!-- =========================================================
+     PROFILE PHOTO
+=========================================================
+
+Place your photo in the same folder as:
+
+    profile.jpg
+
+Example:
+
+Sandhya03242.github.io/
+│
+├── index.html
+├── style.css
+├── script.js
+└── profile.jpg
+
+========================================================= -->
+
+
 <script src="script.js"></script>
+
 </body>
 </html>
