@@ -260,7 +260,9 @@ function Hero() {
 function About() {
   return (
     <section className="section container about" id="about">
-      <div className="section-label reveal">01 — About</div>
+      <div className="section-label reveal">
+        01 — About
+      </div>
 
       <div className="about-grid">
         <div className="section-heading reveal">
@@ -317,7 +319,9 @@ function About() {
 function Experience() {
   return (
     <section className="section container" id="experience">
-      <div className="section-label reveal">02 — Experience</div>
+      <div className="section-label reveal">
+        02 — Experience
+      </div>
 
       <div className="section-heading split reveal">
         <div>
@@ -338,7 +342,10 @@ function Experience() {
 
       <div className="timeline">
         {experience.map((item) => (
-          <article className="timeline-item reveal" key={item.number}>
+          <article
+            className="timeline-item reveal"
+            key={item.number}
+          >
             <div className="timeline-dot"></div>
 
             <div className="time">{item.date}</div>
@@ -350,7 +357,9 @@ function Experience() {
                   <p>{item.company}</p>
                 </div>
 
-                <span className="role-number">{item.number}</span>
+                <span className="role-number">
+                  {item.number}
+                </span>
               </div>
 
               <ul>
@@ -410,7 +419,9 @@ function OmniSight() {
       </div>
 
       <div className="project-info">
-        <div className="project-index">01 / FEATURED</div>
+        <div className="project-index">
+          01 / FEATURED
+        </div>
 
         <h3>OmniSight</h3>
 
@@ -489,7 +500,9 @@ function MusicProject() {
       </div>
 
       <div className="project-info">
-        <div className="project-index">02 / NLP</div>
+        <div className="project-index">
+          02 / NLP
+        </div>
 
         <span className="project-type">
           NLP / RECOMMENDER
@@ -657,7 +670,10 @@ function Projects() {
 
 function Toolkit() {
   return (
-    <section className="section stack-section" id="stack">
+    <section
+      className="section stack-section"
+      id="stack"
+    >
       <div className="container">
         <div className="section-label reveal">
           04 — Toolkit
@@ -665,7 +681,9 @@ function Toolkit() {
 
         <div className="stack-grid">
           <div className="section-heading reveal">
-            <p className="mini">My technical playground</p>
+            <p className="mini">
+              My technical playground
+            </p>
 
             <h2>
               The tools behind
@@ -738,7 +756,10 @@ function Education() {
 
 function Contact() {
   return (
-    <section className="contact container" id="contact">
+    <section
+      className="contact container"
+      id="contact"
+    >
       <div className="contact-orbit"></div>
 
       <div className="contact-inner reveal">
@@ -758,7 +779,8 @@ function Contact() {
           className="contact-email"
           href="mailto:sandhyasuresh03242@gmail.com"
         >
-          sandhyasuresh03242@gmail.com <span>↗</span>
+          sandhyasuresh03242@gmail.com{" "}
+          <span>↗</span>
         </a>
 
         <div className="socials">
@@ -788,46 +810,35 @@ function App() {
     const revealElements =
       document.querySelectorAll(".reveal");
 
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.08,
-      }
-    );
-
-    revealElements.forEach((element) =>
-      revealObserver.observe(element)
-    );
-
-    const glow = document.querySelector(".cursor-glow");
-
-    const handleMouseMove = (event) => {
-      if (glow) {
-        glow.style.left = `${event.clientX}px`;
-        glow.style.top = `${event.clientY}px`;
-      }
-    };
-
-    document.addEventListener(
-      "mousemove",
-      handleMouseMove
-    );
-
-    return () => {
-      revealObserver.disconnect();
-
-      document.removeEventListener(
-        "mousemove",
-        handleMouseMove
+    // Safe reveal animation
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.08,
+        }
       );
-    };
+
+      revealElements.forEach((element) => {
+        revealObserver.observe(element);
+      });
+
+      return () => {
+        revealObserver.disconnect();
+      };
+    }
+
+    // Fallback for browsers/environments without IntersectionObserver
+    revealElements.forEach((element) => {
+      element.classList.add("visible");
+    });
   }, []);
 
   return (
@@ -861,7 +872,9 @@ function App() {
           Designed & built for the next opportunity.
         </span>
 
-        <a href="#home">Back to top ↑</a>
+        <a href="#home">
+          Back to top ↑
+        </a>
       </footer>
     </>
   );
