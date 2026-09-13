@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import profilePhoto from "./assets/profile.jpg";
 
 const experience = [
   {
@@ -207,10 +208,11 @@ function Hero() {
           <div className="node n4">API</div>
 
           <div className="portrait-card">
-            <div className="portrait-placeholder">
-              <div className="portrait-letter">S</div>
-              <span>YOUR PHOTO</span>
-            </div>
+            <img
+              src={profilePhoto}
+              alt="Sandhya S - Junior AI Engineer"
+              className="portrait-image"
+            />
 
             <div className="portrait-caption">
               <span>Sandhya S</span>
