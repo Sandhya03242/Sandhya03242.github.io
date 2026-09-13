@@ -1,27 +1,16 @@
-# Sandhya S — AI Engineer Portfolio
+# React + Vite
 
-A premium animated portfolio website designed for GitHub Pages.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Run locally
+Currently, two official plugins are available:
 
-Open `index.html` directly, or use any static server.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-```bash
-python -m http.server 5500
-```
+## React Compiler
 
-Then visit `http://localhost:5500`.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## GitHub Pages
+## Expanding the ESLint configuration
 
-Upload `index.html`, `styles.css`, and `script.js` to your repository. For a user site, the repository should be named `Sandhya03242.github.io`.
-
-### Replace the photo
-
-In `index.html`, find `.portrait-placeholder` and replace its contents with:
-
-```html
-<img src="assets/profile.jpg" alt="Sandhya S" />
-```
-
-Then add your image at `assets/profile.jpg`.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
