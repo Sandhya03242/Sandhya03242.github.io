@@ -264,6 +264,60 @@ button {
 }
 
 /* --------------------------------
+   RESUME LINKS
+-------------------------------- */
+
+.nav-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav-resume:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.nav-resume span {
+  font-size: 14px;
+}
+
+.stat-resume {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.stat-resume:hover {
+  transform: translateY(-3px);
+}
+
+.stat-resume strong {
+  transition: color 0.25s ease;
+}
+
+.stat-resume:hover strong {
+  color: var(--accent);
+}
+
+.stat-resume span {
+  color: var(--muted);
+}
+
+/* --------------------------------
    HERO
 -------------------------------- */
 
@@ -506,23 +560,6 @@ button {
   height: 370px;
   object-fit: cover;
   object-position: center top;
-}
-
-.portrait-caption {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 17px 20px;
-}
-
-.portrait-caption span {
-  font-weight: 800;
-  font-size: 13px;
-}
-
-.portrait-caption small {
-  color: var(--muted);
-  font-size: 10px;
 }
 
 .node {
@@ -1425,11 +1462,14 @@ button {
   color: #a3a4b0;
   font-family: "DM Mono", monospace;
   font-size: 10px;
-  transition: color 0.25s ease;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .socials a:hover {
   color: white;
+  transform: translateY(-2px);
 }
 
 /* --------------------------------
@@ -1652,6 +1692,10 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .stat-resume {
+    min-width: 0;
+  }
+
   .timeline::before {
     left: 6px;
   }
@@ -1760,6 +1804,14 @@ button {
     text-align: center;
     padding-top: 25px;
   }
+
+  .nav-resume {
+    font-size: 11px;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
 }
 
 /* --------------------------------
@@ -1833,6 +1885,14 @@ button {
 
   .contact-email {
     padding: 12px 14px;
+  }
+
+  .nav-resume {
+    display: none;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
   }
 }
 

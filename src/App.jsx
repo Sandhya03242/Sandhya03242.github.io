@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import profilePhoto from "./assets/profile.jpg";
+import resume from "./assets/Sandhya_S_Resume.pdf";
 
 const experience = [
   {
     number: "01",
-    date: "NOV 2024 — PRESENT",
+    date: "AUG 2024 — AUG 2026",
     role: "Junior AI Engineer",
     company: "Axomium Labs · Remote",
     points: [
@@ -128,7 +129,16 @@ function Navbar() {
         </div>
 
         <div className="nav-actions">
-          <a className="nav-cta" href="#contact">
+          <a
+            className="nav-resume"
+            href={resume}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Resume <span>↗</span>
+          </a>
+
+          <a className="nav-cta" href="#contact" onClick={closeMenu}>
             Let's talk <span>↗</span>
           </a>
 
@@ -176,6 +186,15 @@ function Hero() {
 
             <a
               className="btn btn-ghost"
+              href={resume}
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Resume <span>↗</span>
+            </a>
+
+            <a
+              className="btn btn-ghost"
               href="https://github.com/Sandhya03242"
               target="_blank"
               rel="noreferrer"
@@ -213,11 +232,6 @@ function Hero() {
               alt="Sandhya S - Junior AI Engineer"
               className="portrait-image"
             />
-
-            <div className="portrait-caption">
-              <span>Sandhya S</span>
-              <small>Junior AI Engineer</small>
-            </div>
           </div>
 
           <div className="floating-chip chip-one">
@@ -298,7 +312,7 @@ function About() {
 
           <div className="stats">
             <div>
-              <strong>1+ Year</strong>
+              <strong>2 Years</strong>
               <span>AI Engineering</span>
             </div>
 
@@ -309,8 +323,18 @@ function About() {
 
             <div>
               <strong>3+</strong>
-              <span>Featured Builds</span>
+              <span>AI Projects</span>
             </div>
+
+            <a
+              className="stat-resume"
+              href={resume}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <strong>Resume ↗</strong>
+              <span>View Resume</span>
+            </a>
           </div>
         </div>
       </div>
@@ -662,9 +686,7 @@ function Projects() {
       </div>
 
       <OmniSight />
-
       <MusicProject />
-
       <VisionProject />
     </section>
   );
@@ -801,6 +823,14 @@ function Contact() {
           >
             GitHub ↗
           </a>
+
+          <a
+            href={resume}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Resume ↗
+          </a>
         </div>
       </div>
     </section>
@@ -812,7 +842,6 @@ function App() {
     const revealElements =
       document.querySelectorAll(".reveal");
 
-    // Safe reveal animation
     if ("IntersectionObserver" in window) {
       const revealObserver = new IntersectionObserver(
         (entries) => {
@@ -837,7 +866,6 @@ function App() {
       };
     }
 
-    // Fallback for browsers/environments without IntersectionObserver
     revealElements.forEach((element) => {
       element.classList.add("visible");
     });
